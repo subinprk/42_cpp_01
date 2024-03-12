@@ -5,13 +5,13 @@
 #                                                     +:+ +:+         +:+      #
 #    By: siun <siun@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/03/12 19:03:07 by subpark           #+#    #+#              #
-#    Updated: 2024/03/12 23:28:27 by siun             ###   ########.fr        #
+#    Created: 2024/03/12 22:21:54 by siun              #+#    #+#              #
+#    Updated: 2024/03/12 23:28:20 by siun             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = main.cpp HumanA.cpp HumanB.cpp Weapon.cpp
-HDRS = HumanA.hpp HumanB.hpp Weapon.hpp
+SRC = main.cpp
+HDRS =
 OBJ = $(SRC:.cpp=.o)
 CC = c++
 RM = rm -f
