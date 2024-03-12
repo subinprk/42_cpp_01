@@ -6,11 +6,11 @@
 #    By: subpark <subpark@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/12 17:22:15 by siun              #+#    #+#              #
-#    Updated: 2024/03/12 18:00:55 by subpark          ###   ########.fr        #
+#    Updated: 2024/03/12 18:03:22 by subpark          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = Zombie.cpp newZombie.cpp randomChump.cpp main.cpp
+SRC = Zombie.cpp zombieHorde.cpp main.cpp
 HDRS = Zombie.hpp
 OBJ = $(SRC:.cpp=.o)
 CC = c++

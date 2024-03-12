@@ -1,21 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   newZombie.cpp                                      :+:      :+:    :+:   */
+/*   zombieHorde.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: subpark <subpark@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/12 14:16:24 by siun              #+#    #+#             */
-/*   Updated: 2024/03/12 17:59:30 by subpark          ###   ########.fr       */
+/*   Created: 2024/03/12 17:44:15 by subpark           #+#    #+#             */
+/*   Updated: 2024/03/12 19:02:25 by subpark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
+#include <sstream>
+#include <string>
 
-Zombie* newZombie(std::string name)
+std::string num2string(int number)
 {
-	Zombie* newzombie = new Zombie();
-	newzombie->change_name(name);
-	newzombie->announce();
-	return (newzombie);
+    std::stringstream ss;
+    ss << number;
+    return(ss.str());
+}
+
+Zombie* zombieHorde(int N, std::string name)
+{
+    Zombie *multiZombie;
+    
+    multiZombie = new Zombie[N];
+    for(int i = 0; i < N; i ++)
+    {
+        multiZombie[i].change_name(name + " " + num2string(i + 1));
+        multiZombie[i].announce();
+    }
+    return (multiZombie);
 }

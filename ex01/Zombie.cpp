@@ -1,21 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   newZombie.cpp                                      :+:      :+:    :+:   */
+/*   Zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: subpark <subpark@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/12 14:16:24 by siun              #+#    #+#             */
-/*   Updated: 2024/03/12 17:59:30 by subpark          ###   ########.fr       */
+/*   Created: 2024/03/10 17:50:18 by siun              #+#    #+#             */
+/*   Updated: 2024/03/12 17:46:23 by subpark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-Zombie* newZombie(std::string name)
+Zombie::~Zombie()
 {
-	Zombie* newzombie = new Zombie();
-	newzombie->change_name(name);
-	newzombie->announce();
-	return (newzombie);
+	std::cout << name << " is dead" << std::endl;
+}
+
+Zombie::Zombie(){}
+
+Zombie::Zombie(std::string name)
+{
+	this->name = name;
+}
+
+void Zombie::change_name(std::string name)
+{
+	this->name = name;
+}
+
+std::string Zombie::get_name()
+{
+	return (name);
+}
+
+void Zombie::announce()
+{
+	std::cout << this->get_name() << ": BraiiiiiiinnnzzzZ..."<< std::endl;
 }
