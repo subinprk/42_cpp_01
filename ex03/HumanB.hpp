@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   HumanB.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: siun <siun@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: subpark <subpark@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 21:13:03 by siun              #+#    #+#             */
-/*   Updated: 2024/03/12 21:45:08 by siun             ###   ########.fr       */
+/*   Updated: 2024/03/21 19:16:42 by subpark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class HumanB{
 		void attack();
 		void setWeapon(Weapon weapon);
 		HumanB(std::string name);
-		HumanB(std::string name, Weapon weapon);
+		HumanB(std::string name, Weapon &weapon);
 		~HumanB();
 };
 

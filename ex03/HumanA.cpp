@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   HumanA.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: siun <siun@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: subpark <subpark@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 21:12:43 by siun              #+#    #+#             */
-/*   Updated: 2024/03/12 21:38:05 by siun             ###   ########.fr       */
+/*   Updated: 2024/03/21 19:16:04 by subpark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 void	HumanA::attack()
 {
-	std::cout << name << " attacks with their " << weapon.getType() << std::endl;
+	std::cout << _name << " attacks with their " << _weapon.getType() << std::endl;
 }
 
-HumanA::HumanA(std::string name, Weapon weapon)
+HumanA::HumanA(std::string name, Weapon &weapon):_weapon(weapon),  _name(name)
 {
-	this->name = name;
-	this->weapon = weapon;
+	// this->_name = name;
+	// this->_weapon = weapon;
 }
