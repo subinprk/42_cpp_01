@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Harl.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: siun <siun@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: subpark <subpark@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 16:10:57 by siun              #+#    #+#             */
-/*   Updated: 2024/03/13 18:02:40 by siun             ###   ########.fr       */
+/*   Updated: 2024/03/23 21:28:30 by subpark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	Harl::info(void)
 
 void	Harl::warning(void)
 {
-	std::cout <<  "I think I deserve to havee some extra bacon for free. "\
+	std::cout <<  "I think I deserve to have some extra bacon for free. "\
 				"I've coming for years whereas you started working here since last month"
 				<< std::endl;
 }
@@ -51,4 +51,5 @@ void	Harl::complain(std::string level)
 			break ;
 		}
 	}
+//	(this->*ptr_complain[3])();
 }
