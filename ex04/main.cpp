@@ -6,7 +6,7 @@
 /*   By: subpark <subpark@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/12 22:22:46 by siun              #+#    #+#             */
-/*   Updated: 2024/03/23 15:18:09 by subpark          ###   ########.fr       */
+/*   Updated: 2024/03/23 21:00:17 by subpark          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	put_replace(char **argv, const std::string str, std::ofstream &file)
 	int	pos;
 	for(int i = 0; i < (int)str.size(); i ++)
 	{
-		std::cout << str[i];
+		//std::cout << str[i];
 		pos = str.find(argv[2], i);
 		if (pos != -1 && pos == i)
 		{
@@ -42,7 +42,7 @@ int main(int argc, char **argv)
 	std::string str;
 	char c;
 
-	if(argc != 3)
+	if(argc != 4)
 		return (1);
 	std::ifstream file_in(argv[1]);
 	if (!file_in.is_open())
